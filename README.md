@@ -1,7 +1,5 @@
 # Hindi-Jokes-API
-Hindi Jokes API : GET random Hindi jokes..
 
-![image](https://github.com/Asadullah-nadeem/Hindi-Jokes-API/assets/88024587/2b9362d6-9ad4-47bf-9d72-80af3d5f9a85)
 
 
 Free forever
