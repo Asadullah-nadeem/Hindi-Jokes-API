@@ -3,14 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+
+      @keyframes fall-down {
+        0% {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .animate-fall-down {
+        animation: fall-down 1s ease-in-out;
+      }
+    </style>
     <title>चुटकुले</title>
   </head>
-  <body>
-    <div class="container">
-      <h3>हँसो मत चुनौती</h3>
-      <div id="joke" class="joke">.....................</div>
-      <button id="jokeBtn" class="btn">दूसरे चुटकुले के लिए बटन क्लिक करें.
+  <body class="flex items-center justify-center h-screen bg-cover bg-center animate-fall-down" style="background-image: url('img.png')">
+    <div class="bg-white/80 rounded-lg shadow-lg p-8 max-w-xl w-full text-center">
+      <h3 class="text-lg font-semibold text-gray-600 tracking-wider">हँसो मत चुनौती</h3>
+      <div id="joke" class="joke text-2xl mt-8 leading-8 text-gray-800">.....................</div>
+      <button id="jokeBtn" class="btn mt-6 px-6 py-2 bg-purple-600 text-white font-medium rounded-lg shadow hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2">
+        दूसरे चुटकुले के लिए बटन क्लिक करें.
       </button>
     </div>
     <script src="script.js"></script>
